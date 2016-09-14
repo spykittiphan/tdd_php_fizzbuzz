@@ -2,7 +2,6 @@
 
 class FizzBuzz
 {
-	
 	function __construct($value)
 	{
 		$this->value = $value;
