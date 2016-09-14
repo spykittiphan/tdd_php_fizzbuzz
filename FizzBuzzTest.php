@@ -9,20 +9,29 @@ class FizzBuzz
 	}
 
 	function count(){
-		if (($this->value %15)==0) 
+		if ($this->value == 15) 
 		{
 			return "FizzBuzz";
 		}
-		elseif (($this->value %5)==0) 
+		elseif ($this->isModuloByFive()) 
 		{
 			return "Buzz";
 		}
-		elseif (($this->value %3)==0) 
+		elseif ($this->isModuloByThree()) 
 		{
 			return "Fizz";
 		}else{
 			return $this->value;
 		}	
+	}
+
+	function isModuloByThree()
+	{
+		return ($this->value %3)==0;
+	}
+	function isModuloByFive()
+	{
+		return ($this->value %5)==0;
 	}
 }
 
