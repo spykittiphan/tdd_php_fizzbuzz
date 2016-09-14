@@ -10,24 +10,19 @@ class FizzBuzz
 	}
 
 	function toString(){
-		if($this->value == 1)
-		{
-			return "1";
-		}
-		elseif($this->value==2)
-		{
-			return "2";
-		} 
-		elseif ($this->value==5) 
-		{
-			return "Buzz";
-		}
-		elseif (($this->value %15) ==0) 
+		
+		if (($this->value %15)==0) 
 		{
 			return "FizzBuzz";
 		}
+		elseif (($this->value %5)== 0) 
+		{
+			return "Buzz";
+		}
 		elseif (($this->value %3)==0) {
 			return "Fizz";
+		}else{
+			return $this->value;
 		}
 		
 
