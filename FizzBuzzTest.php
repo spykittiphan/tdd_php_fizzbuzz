@@ -11,8 +11,16 @@ class FizzBuzz
 
 	function toString(){
 		if($this->value == 1)
+		{
 			return "1";
-		return "2";
+		}
+		elseif($this->value==2)
+		{
+			return "2";
+		} elseif ($this->value==5) {
+			return "Buzz";
+		}
+		
 	}
 }
 
@@ -31,6 +39,11 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
 
 		$fizzbuzz = new FizzBuzz(2);
 		$this->assertEquals("2", $fizzbuzz->toString());
+	}
+
+	function testShouldBeReturnBuzzString(){
+		$fizzbuzz = new FizzBuzz(5);
+		$this->assertEquals("Buzz", $fizzbuzz->toString());
 	}
 
 }
