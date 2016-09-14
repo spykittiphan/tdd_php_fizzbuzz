@@ -18,18 +18,19 @@ class FizzBuzz
 		{
 			return "2";
 		} 
-		elseif ($this->value==3) 
-		{
-			return "Fizz";
-		}
 		elseif ($this->value==5) 
 		{
 			return "Buzz";
 		}
-		elseif ($this->value==15) 
+		elseif (($this->value %15) ==0) 
 		{
 			return "FizzBuzz";
 		}
+		elseif (($this->value %3)==0) {
+			return "Fizz";
+		}
+		
+
 		
 	}
 }
