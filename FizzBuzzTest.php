@@ -26,6 +26,10 @@ class FizzBuzz
 		{
 			return "Buzz";
 		}
+		elseif ($this->value==15) 
+		{
+			return "FizzBuzz";
+		}
 		
 	}
 }
@@ -51,6 +55,10 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
 	function testShouldBeReturnBuzzString(){
 		$fizzbuzz = new FizzBuzz(5);
 		$this->assertEquals("Buzz", $fizzbuzz->toString());
+	}
+	function testShouldBeReturnFizzBuzzString(){
+		$fizzbuzz = new FizzBuzz(15);
+		$this->assertEquals("FizzBuzz", $fizzbuzz->toString());
 	}
 
 }
